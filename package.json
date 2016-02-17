@@ -1,0 +1,18 @@
+{
+  "name": "wadofgum-process",
+  "version": "0.1.0",
+  "description": "wadofgum extention for processing fields",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nathanel C. Fritz",
+  "license": "MIT",
+  "dependencies": {
+    "is-promise": "^2.1.0",
+    "lodash": "^4.4.0"
+  },
+  "devDependencies": {
+    "eslint-config-andyet": "^1.0.0"
+  }
+}
