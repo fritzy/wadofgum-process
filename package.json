@@ -1,6 +1,6 @@
 {
   "name": "wadofgum-process",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "wadofgum extention for processing fields",
   "main": "index.js",
   "scripts": {
