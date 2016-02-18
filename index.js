@@ -19,11 +19,11 @@ function Processors(baseClass) {
     process (obj, tags) {
       tags = Array.isArray(tags) ? tags : [tags];
 
-      const processors = this.constructor.meta.get('processors');
+      const processors = this.processors || {};
 
       const promises = [];
       const promiseMap = [];
-      const out = loaddash.cloneDeep(obj);
+      const out = lodash.cloneDeep(obj);
 
       for (let tag of tags) {
         promises[tag] = {}
@@ -43,7 +43,7 @@ function Processors(baseClass) {
           const field = promiseMap.shift();
           out[field] = value;
         }
-        return Promise.resolve(this);
+        return Promise.resolve(out);
       });
     }
 
@@ -53,3 +53,4 @@ function Processors(baseClass) {
   return Model;
 }
 
+module.exports = Processors;
